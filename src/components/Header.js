@@ -13,7 +13,7 @@ const Header =()=>{
     return (
         <div className="flex justify-between sticky top-0 bg-green-100 shadow-xl z-10">
             <div>
-                <img className="w-[130px]" src= {LOGO_URL}
+                <img className="w-[180px]" src= {LOGO_URL}
                 alt="logo"/>  
             </div>
             <div>

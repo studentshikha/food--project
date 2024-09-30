@@ -28,20 +28,22 @@ const showResturantsCart =async ()=>{
 
 return (
     <div>
+      <div className="flex justify-between">
       <div className="mt-5 px-20 ">
         <input
-          className="w-[300px] border-gray-500 h-10 shadow-md shadow-gray-600 rounded-lg"
+          className="w-[300px] border-gray-300 h-10  p-5  shadow-lg shadow-gray-800 rounded-lg"
          ref={searchText} type="text" placeholder="search"/>
         <button
-        className=" ml-3 shadow-md  shadow-gray-600 bg-gray-500 p-2 rounded-md " 
+        className=" ml-3 shadow-md  shadow-gray-600 bg-gray-300 p-2 rounded-md " 
         onClick={()=>{
         setFilteredRes(listOfResturant.filter((res)=>res?.info?.name.toLowerCase().
         includes(searchText.current.value.toLowerCase())))
         }}
         >search</button>
-
+      </div>
+      <div>
         <button 
-        className="m-5 rounded-md border-spacing-3 grid-cols-3 bg-cyan-700 p-1 font-normal text-white text-sm"
+        className="m-5 rounded-md border-spacing-3  grid-cols-3 bg-gray-500 mr-20 p-3 font-normal text-white text-sm"
         onClick={()=>{
           setFilteredRes(listOfResturant?.filter((resturant)=>resturant?.info?.avgRating>4.5))
           
@@ -49,6 +51,7 @@ return (
         >Top Rated Resturants
         </button>
         
+      </div>
       </div>
      
       <div className = "flex mx-10 flex-wrap m-auto">

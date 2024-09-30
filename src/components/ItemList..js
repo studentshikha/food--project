@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { RESCART_IMG } from "../utils/constant";
-import { addItem, removeItem } from "../utils/cartSlice";
+import { addItem } from "../utils/cartSlice";
 
 const ItemList = ({items})=>{
 
@@ -13,10 +13,6 @@ const ItemList = ({items})=>{
      dispatch(addItem(item));
    
   }
-  const handleRemove = ()=>{
- dispatch(removeItem())
-  }
-   
     return (
         <div className="w-[70%] mt-20 font-medium  m-auto">
           {
@@ -30,7 +26,7 @@ const ItemList = ({items})=>{
 
                 <div className="border-5 border-gray-800"> 
                 <img className="w-[150px]   rounded-lg" src={RESCART_IMG + item.card.info.imageId}/>
-                <button onClick={() => handleRemove()} className=" absolute m-auto p-2  rounded-xl bg-black hover:bg-gray-400 shadow-sm shadow-gray-200 px-2 text-white w-20 mx-50 -mt-10">remove -</button>
+                
                 <button onClick={() => handleAddItem(item)} className=" absolute m-auto p-2  rounded-xl bg-black hover:bg-gray-400 shadow-sm shadow-gray-200 px-2 text-white w-20 mx-10 -mt-10">ADD +</button>
                 </div>
             </div>

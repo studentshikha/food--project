@@ -28,7 +28,7 @@ const categories =   menu?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
             <h1 className="text-xl font-semibold" >{cuisines?.join(",")}</h1>
             <h1 className="text-xl font-semibold">{totalRatingsString}</h1>
            </div>
-           <h1>Menu</h1>
+           <h1 className="font-bold text-center">Menu</h1>
            {
             categories?.map((category)=><ResturantCategories  data={category?.card?.card}/>)
            }
